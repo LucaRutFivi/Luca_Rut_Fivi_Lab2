@@ -4,6 +4,7 @@ using Luca_Rut_Fivi_Lab2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Luca_Rut_Fivi_Lab2.Migrations
 {
     [DbContext(typeof(Luca_Rut_Fivi_Lab2Context))]
-    partial class Luca_Rut_Fivi_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20241116093424_BookCategory")]
+    partial class BookCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
