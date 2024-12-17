@@ -8,8 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using Luca_Rut_Fivi_Lab2.Data;
 using Luca_Rut_Fivi_Lab2.Models;
 
+
 namespace Luca_Rut_Fivi_Lab2.Pages.Books
 {
+
     public class DetailsModel : PageModel
     {
         private readonly Luca_Rut_Fivi_Lab2.Data.Luca_Rut_Fivi_Lab2Context _context;

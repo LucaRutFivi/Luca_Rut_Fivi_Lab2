@@ -6,6 +6,12 @@
 }
 
 <h1>Details</h1>
+builder.Services.AddRazorPages(options =>
+{
+options.Conventions.AuthorizeFolder("/Books");
+options.Conventions.AllowAnonymousToPage("/Books/Index");
+options.Conventions.AllowAnonymousToPage("/Books/Details");
+});
 
 <div>
     <h4>Book</h4>

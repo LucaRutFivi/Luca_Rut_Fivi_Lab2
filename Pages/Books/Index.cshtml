@@ -7,6 +7,13 @@
 
 <h1>Index</h1>
 
+builder.Services.AddRazorPages(options =>
+{
+options.Conventions.AuthorizeFolder("/Books");
+options.Conventions.AllowAnonymousToPage("/Books/Index");
+options.Conventions.AllowAnonymousToPage("/Books/Details");
+});
+
 <p>
     <a asp-page="Create">Create New</a>
 </p>
