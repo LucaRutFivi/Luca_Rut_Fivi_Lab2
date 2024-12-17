@@ -48,8 +48,7 @@ namespace Luca_Rut_Fivi_Lab2.Pages.Books
             });
             ViewData["AuthorID"] = new SelectList(authorList, "ID", "FullName");
             Book = book;
-            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID",
-"PublisherName");
+            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID","PublisherName");
             
             return Page();
         }
@@ -65,6 +64,7 @@ selectedCategories)
             }
             //se va include Author conform cu sarcina de la lab 2
             var bookToUpdate = await _context.Book
+            .Include(i => i.Author)
             .Include(i => i.Publisher)
             .Include(i => i.BookCategories)
             .ThenInclude(i => i.Category)
